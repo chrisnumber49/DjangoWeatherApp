@@ -1,6 +1,6 @@
 # Django Weather App
 
-An application that can query the weather in the specific city which is built with Django, Bootstrap, python, CSS and the Open Weather Map API
+An weather application that built with Django, Bootstrap, python, CSS and the Open Weather Map API
 
 This application is deployed on: https://djangoweatherappchris49.herokuapp.com/
 
@@ -26,6 +26,6 @@ To Visit App: `localhost:8000/`
 
 ## Reflection 
 
-This was my first side project of learning Django. In this project we can... I started this project by using the command `django-admin startproject` to create the boilerplate of project, then create new app with command `python manage.py startapp`.
+This is my first side project of learning Django. In this project we can query the weather with the specific city name we type in, then store the city into database if the response from Open Weather Map API is correct. I started this project by using the command `django-admin startproject` to create the boilerplate of project, then create new app with command `python manage.py startapp`.
 
 The technologies implemented in this project including... Through this side project, I learned about the basic concept of...
