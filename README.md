@@ -26,6 +26,6 @@ To Visit App: `localhost:8000/`
 
 ## Reflection 
 
-This was my first side project of learning Django. In this project I built an application that can... I started this project by using the command `django-admin startproject` to create the boilerplate of project, then create new app with command `python manage.py startapp`, several additional dependency... were installed during the development in this project.  
+This was my first side project of learning Django. In this project we can... I started this project by using the command `django-admin startproject` to create the boilerplate of project, then create new app with command `python manage.py startapp`.
 
 The technologies implemented in this project including... Through this side project, I learned about the basic concept of...
