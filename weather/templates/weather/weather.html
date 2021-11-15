@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="d-flex justify-content-center p-5 mb-5 bg-info text-white">
+        <h1 class="font-weight-bolder">
+            What's the weather like?
+        </h1>
+    </header>
+
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="col col-lg-5 col-md-8">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <!-- recieve form from views -->
+                        {{form.cityName}}
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary">
+                                Add City
+                            </button>
+                        </div>
+                    </div>
+                    <!-- recieve message from views -->
+                    {% if message %}
+                        <div style="text-align:center;">{{message}}</div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="col col-lg-5 col-md-8">
+                <!-- recieve citiesWeather from views, render in for loop -->
+                {% for cityWeather in citiesWeather %}
+                    <div class="media border border-secondary my-2">
+                        <img src="http://openweathermap.org/img/w/{{cityWeather.icon}}.png" class="align-self-center mr-3" alt="Image">
+
+                        <div class="media-body ml-3">
+                                <p>
+                                    <h3>{{cityWeather.city}}</h3>
+                                    <h4>{{cityWeather.temp}}</h4>
+                                    {{cityWeather.description}}
+                                </p>
+                        </div>
+                        <!-- send variable cityWeather.city to views.deleteCity (name="deleteCity") -->
+                        <a href="{% url 'deleteCity' cityWeather.city %}" class="align-self-start ">
+                            <button class="btn btn-sm btn-light rounded-circle">x</button>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-secondary text-white text-center text-lg-start" >
+        <div class="p-3">
+          © Copyright: 2022
+        </div>
+    </footer>
+</body>
+
+</html>
