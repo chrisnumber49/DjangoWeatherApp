@@ -12,7 +12,7 @@ Open Weather Map API: https://openweathermap.org/api
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need `django` installed globally on your machine.  
+Clone down this repository. You will need `Django` installed globally on your machine.  
 
 Installation: `pip install Django`
 
@@ -26,6 +26,6 @@ To Visit App: `localhost:8000/`
 
 ## Reflection 
 
-This is my first side project of learning Django. In this project we can query the weather with the specific city name we type in, then store the city into database if the response from Open Weather Map API is correct. I started this project by using the command `django-admin startproject` to create the boilerplate of project, then create new app with command `python manage.py startapp`.
+This is my first side project of learning Django. In this project we can query the weather with the specific city name we type in, then store the city into database if the response from Open Weather Map API is valid. I started this project by using the command `django-admin startproject` to create the boilerplate of project, then create new app with command `python manage.py startapp`.
 
-At the end through this side project, I learned about the basic concept of MVT (Model-View-Template) architecture in django to know when user request occured, how views link between the Model data and the Templates to retrieves appropriate data from the database, then renders back the template along with retrieved data.
+At the end through this side project, I learned about the basic concept of MVT (Model-View-Template) architecture in Django to know when user request occured, how Views link between the Model data and the Templates to retrieves appropriate data from the database, then renders back the template along with retrieved data.
