@@ -1,8 +1,10 @@
 # Django Weather App
 
-An application built with Django, Bootstrap, python, and CSS which is used to...
+An application that can query the weather in the specific city which is built with Django, Bootstrap, python, CSS and the Open Weather Map API
 
-This application is deployed on:
+This application is deployed on: https://djangoweatherappchris49.herokuapp.com/
+
+Open Weather Map API: https://openweathermap.org/api
 
 ## Project Screen Shots
 <img src="https://github.com/chrisnumber49/DjangoWeatherApp/blob/master/screen%20shot/demo1.PNG" width="600" > 
