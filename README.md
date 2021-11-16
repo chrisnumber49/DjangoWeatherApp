@@ -7,8 +7,8 @@ This application is deployed on: https://djangoweatherappchris49.herokuapp.com/
 Open Weather Map API: https://openweathermap.org/api
 
 ## Project Screen Shots
-<img src="https://github.com/chrisnumber49/DjangoWeatherApp/blob/master/screen%20shot/demo1.PNG" width="600" > 
-<img src="https://github.com/chrisnumber49/DjangoWeatherApp/blob/master/screen%20shot/demo2.PNG" width="600" > 
+<img src="https://github.com/chrisnumber49/DjangoWeatherApp/blob/master/screen%20shot/demo1.PNG" width="800" > 
+<img src="https://github.com/chrisnumber49/DjangoWeatherApp/blob/master/screen%20shot/demo2.PNG" width="800" > 
 
 ## Installation and Setup Instructions
 
